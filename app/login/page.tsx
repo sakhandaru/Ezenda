@@ -21,7 +21,11 @@ export default function Login() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span className="text-white font-bold text-2xl">n</span>
+            <img
+                src="/Group 6.png"
+                alt="Ezenda Logo"
+                className="w-5 h-5 object-contain rounded"
+                />
           </div>
           <h1 className="text-2xl font-bold text-foreground">Ezenda</h1>
           <p className="text-muted-foreground mt-2">Masuk ke dashboard Anda</p>

@@ -98,7 +98,11 @@ export default function PublicBooking() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">E</span>
+                <img
+                src="/Group 6.png"
+                alt="Ezenda Logo"
+                className="w-5 h-5 object-contain rounded"
+                />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">Ezenda Salon & Spa</h1>

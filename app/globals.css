@@ -77,10 +77,6 @@
   background: hsl(var(--foreground));
 }
 
-/* Smooth transitions */
-/* * {
-  transition: all 0.15s ease-in-out;
-} */
 
 /* Card hover effects */
 .card-hover {

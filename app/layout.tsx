@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Ezenda - Business Management System",
   description: "Sistem manajemen bisnis untuk salon, barbershop, dan spa",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
