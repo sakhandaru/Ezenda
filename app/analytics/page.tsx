@@ -273,7 +273,7 @@ export default function Analytics() {
                   </div>
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">
+                      <span className="text-muted-foregrou</svg>nd">
                         Bookings: {staff.bookings}
                       </span>
                       <span className="font-medium text-foreground">
