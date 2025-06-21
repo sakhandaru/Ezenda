@@ -21,7 +21,7 @@ export default function Login() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span className="text-white font-bold text-2xl">E</span>
+            <span className="text-white font-bold text-2xl">n</span>
           </div>
           <h1 className="text-2xl font-bold text-foreground">Ezenda</h1>
           <p className="text-muted-foreground mt-2">Masuk ke dashboard Anda</p>
@@ -78,7 +78,11 @@ export default function Login() {
 
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <Checkbox id="remember" checked={rememberMe} onCheckedChange={setRememberMe} />
+                <Checkbox
+                  id="remember"
+                  checked={rememberMe}
+                  onCheckedChange={(checked) => setRememberMe(checked === true)}
+                />
                 <Label htmlFor="remember" className="text-muted-foreground text-sm cursor-pointer">
                   Ingat saya
                 </Label>

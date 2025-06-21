@@ -30,7 +30,7 @@ export function Header({ breadcrumb = ["ezenda", "dashboard"], showBackButton = 
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">E</span>
+            <span className="text-white font-bold text-sm">z</span>
           </div>
           <span className="text-foreground font-semibold text-lg">Ezenda</span>
         </div>
