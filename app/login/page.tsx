@@ -20,9 +20,11 @@ export default function Login() {
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo */}
-        <div className="text-center mb-8">
-          <Logo />
-          <h1 className="text-2xl font-bold text-foreground">Ezenda</h1>
+        <div className="flex flex-col items-center justify-center text-center mb-8">
+            <div className="flex items-center space-x-3">
+            <Logo height={60} width={60} />
+            <h1 className="text-6xl font-bold text-foreground">Ezenda.</h1>
+            </div>
           <p className="text-muted-foreground mt-2">Masuk ke dashboard Anda</p>
         </div>
 

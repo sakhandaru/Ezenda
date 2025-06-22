@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Ezenda - Business Management System",
   description: "Sistem manajemen bisnis untuk salon, barbershop, dan spa",
   icons: {
-    icon: "/Group 6.png",
+    icon: "/Dark_Logo.png",
   },
 }
 
