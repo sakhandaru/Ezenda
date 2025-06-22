@@ -60,7 +60,7 @@ export function LandingPage() {
     {
       name: "Facial Treatment",
       price: "Rp 150.000",
-      duration: "60 menit",
+      duration: "60 menit.",
       description: "Perawatan wajah untuk kulit sehat dan bersih",
       icon: Heart,
     },
