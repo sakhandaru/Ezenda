@@ -74,7 +74,7 @@ export function LandingPage() {
     },
     {
       icon: Users,
-      title: "Staf Berpengalaman",
+      title: "Staf Berpengalaman.",
       description: "Tim profesional dengan sertifikasi internasional",
     },
     {
