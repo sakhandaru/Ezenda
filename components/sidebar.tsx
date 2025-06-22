@@ -17,9 +17,11 @@ import {
   Package,
   ChevronLeft,
   ChevronRight,
+  CalendarDays,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import Logo from "./logo"
 
 const sidebarSections = [
   {
@@ -33,7 +35,7 @@ const sidebarSections = [
     title: "BUSINESS",
     items: [
       { name: "Booking", href: "/booking", icon: Calendar },
-      { name: "Kalender", href: "/calendar", icon: Calendar },
+      { name: "Kalender", href: "/calendar", icon: CalendarDays },
       { name: "POS", href: "/pos", icon: ShoppingCart },
       { name: "Pelanggan", href: "/customers", icon: Users },
       { name: "Layanan", href: "/services", icon: Scissors },
@@ -69,13 +71,7 @@ export function Sidebar() {
       <div className="flex items-center justify-between p-4 border-b border-border">
         {!collapsed && (
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
-              <img
-                src="/Group 6.png"
-                alt="Ezenda Logo"
-                className="w-5 h-5 object-contain rounded"
-                />
-            </div>
+            <Logo height={24} width={24} />
             <span className="text-foreground font-semibold text-lg">Ezenda</span>
           </div>
         )}

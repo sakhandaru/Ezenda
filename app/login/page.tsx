@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from "lucide-react"
+import Logo from "@/components/logo"
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false)
@@ -20,13 +21,7 @@ export default function Login() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <img
-                src="/Group 6.png"
-                alt="Ezenda Logo"
-                className="w-5 h-5 object-contain rounded"
-                />
-          </div>
+          <Logo />
           <h1 className="text-2xl font-bold text-foreground">Ezenda</h1>
           <p className="text-muted-foreground mt-2">Masuk ke dashboard Anda</p>
         </div>

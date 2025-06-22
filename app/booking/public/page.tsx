@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, User, MapPin, Phone, Mail, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react"
+import Logo from "@/components/logo"
 
 export default function PublicBooking() {
   const [selectedService, setSelectedService] = useState<number | null>(null)
@@ -97,13 +98,7 @@ export default function PublicBooking() {
       <header className="bg-background border-b border-border px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                <img
-                src="/Group 6.png"
-                alt="Ezenda Logo"
-                className="w-5 h-5 object-contain rounded"
-                />
-            </div>
+            <Logo height={34} width={34} />
             <div>
               <h1 className="text-xl font-bold text-foreground">Ezenda Salon & Spa</h1>
               <p className="text-sm text-muted-foreground flex items-center">

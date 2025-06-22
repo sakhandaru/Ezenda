@@ -25,7 +25,7 @@ import {
 
 export default function BookingManagement() {
   const [selectedStatus, setSelectedStatus] = useState("all")
-  const [selectedDate, setSelectedDate] = useState("today")
+  const [selectedDate, setSelectedDate] = useState("all")
 
   const bookings = [
     {
