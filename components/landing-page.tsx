@@ -149,6 +149,7 @@ export function LandingPage() {
                   Admin
                 </Link>
               </div>
+              
               <Link href="/booking/public">
                 <Button className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white shadow-lg">
                   <Calendar className="h-4 w-4 mr-2" />
