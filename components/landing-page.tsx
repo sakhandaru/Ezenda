@@ -91,19 +91,19 @@ export function LandingPage() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Wildan",
       rating: 5,
       comment: "Pelayanan luar biasa! Hasil potong rambutnya sangat memuaskan dan stafnya ramah.",
       service: "Hair Cut & Color",
     },
     {
-      name: "Michael Chen",
+      name: "Regina",
       rating: 5,
       comment: "Tempat favorit untuk cukur jenggot. Hasilnya selalu rapi dan profesional.",
       service: "Beard Trim",
     },
     {
-      name: "Emma Wilson",
+      name: "Nona Pica",
       rating: 5,
       comment: "Facial treatmentnya amazing! Kulit jadi lebih bersih dan glowing.",
       service: "Facial Treatment",

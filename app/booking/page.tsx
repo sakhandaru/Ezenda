@@ -31,9 +31,9 @@ export default function BookingManagement() {
     {
       id: 1,
       customer: {
-        name: "Sarah Johnson",
+        name: "Sukino",
         phone: "+62 812-3456-7890",
-        email: "sarah@example.com",
+        email: "sukino@gmail.com",
         avatar: "/placeholder-user.jpg",
       },
       service: "Hair Cut Classic",
@@ -49,9 +49,9 @@ export default function BookingManagement() {
     {
       id: 2,
       customer: {
-        name: "John Smith",
+        name: "Sumarno",
         phone: "+62 813-4567-8901",
-        email: "john@example.com",
+        email: "sumarno@gmail.com",
         avatar: "/placeholder-user.jpg",
       },
       service: "Beard Trim & Shape",
@@ -67,9 +67,9 @@ export default function BookingManagement() {
     {
       id: 3,
       customer: {
-        name: "Emma Wilson",
+        name: "Sumirah",
         phone: "+62 814-5678-9012",
-        email: "emma@example.com",
+        email: "sumirah@gmail.com",
         avatar: "/placeholder-user.jpg",
       },
       service: "Hair Color Premium",
@@ -85,9 +85,9 @@ export default function BookingManagement() {
     {
       id: 4,
       customer: {
-        name: "Mike Brown",
+        name: "Dewi Persik",
         phone: "+62 815-6789-0123",
-        email: "mike@example.com",
+        email: "dewi.persik@gmail.com",
         avatar: "/placeholder-user.jpg",
       },
       service: "Facial Deep Cleansing",
@@ -103,9 +103,9 @@ export default function BookingManagement() {
     {
       id: 5,
       customer: {
-        name: "Lisa Chen",
+        name: "Nona Ambon",
         phone: "+62 816-7890-1234",
-        email: "lisa@example.com",
+        email: "nona.ambon@gmail.com",
         avatar: "/placeholder-user.jpg",
       },
       service: "Hair Wash & Blow Dry",

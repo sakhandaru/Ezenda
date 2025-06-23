@@ -131,13 +131,13 @@ export default function SettingsPage() {
                     <Label htmlFor="firstName" className="text-foreground">
                       Nama Depan
                     </Label>
-                    <Input id="firstName" defaultValue="John" className="bg-background border-border text-foreground" />
+                    <Input id="firstName" defaultValue="Dara" className="bg-background border-border text-foreground" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName" className="text-foreground">
                       Nama Belakang
                     </Label>
-                    <Input id="lastName" defaultValue="Doe" className="bg-background border-border text-foreground" />
+                    <Input id="lastName" defaultValue="Daru" className="bg-background border-border text-foreground" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-foreground">
@@ -146,7 +146,7 @@ export default function SettingsPage() {
                     <Input
                       id="email"
                       type="email"
-                      defaultValue="john@example.com"
+                      defaultValue="daradaru@gmail.com"
                       className="bg-background border-border text-foreground"
                     />
                   </div>
