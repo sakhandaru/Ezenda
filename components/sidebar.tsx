@@ -63,86 +63,88 @@ export function Sidebar() {
   return (
     <div
       className={cn(
-        "flex flex-col h-screen bg-background border-r border-border transition-all duration-300",
-        collapsed ? "w-16" : "w-64",
+      "flex flex-col h-screen bg-background border-r border-border transition-all duration-300",
+      collapsed ? "w-16" : "w-64",
       )}
     >
       {/* Logo */}
-      <div className="flex items-center justify-between p-4 border-b border-border">
-        {!collapsed && (
-          <div className="flex items-center space-x-2">
-            <Logo height={24} width={24} />
-            <span className="text-foreground font-semibold text-lg">Ezenda</span>
-          </div>
-        )}
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => setCollapsed(!collapsed)}
-          className="text-muted-foreground hover:text-foreground"
-        >
-          {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
-        </Button>
+      <div className="flex items-center justify-between p-3 border-b border-border">
+      {!collapsed && (
+        <div className="flex items-center space-x-2">
+        <Logo height={24} width={24} />
+        <span className="text-foreground font-semibold text-lg">Ezenda</span>
+        </div>
+      )}
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={() => setCollapsed(!collapsed)}
+        className="text-muted-foreground hover:text-foreground"
+      >
+        {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
+      </Button>
       </div>
 
       {/* Navigation */}
       <nav className="flex-1 p-4 space-y-6 overflow-y-auto">
-        {sidebarSections.map((section) => (
-          <div key={section.title} className="space-y-2">
-            {!collapsed && (
-              <h3 className="text-xs font-semibold text-muted-foreground tracking-wider uppercase px-2">
-                {section.title}
-              </h3>
-            )}
-            <div className="space-y-1">
-              {section.items.map((item) => {
-                const isActive = pathname === item.href
-                return (
-                  <Link key={item.name} href={item.href}>
-                    <div
-                      className={cn(
-                        "flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-all duration-200 group",
-                        isActive
-                          ? "bg-primary text-primary-foreground shadow-sm"
-                          : "text-muted-foreground hover:text-foreground hover:bg-accent",
-                      )}
-                    >
-                      <item.icon className="h-5 w-5 flex-shrink-0" />
-                      {!collapsed && <span className="font-medium">{item.name}</span>}
-                    </div>
-                  </Link>
-                )
-              })}
+      {sidebarSections.map((section) => (
+        <div key={section.title} className="space-y-2">
+        {!collapsed && (
+          <h3 className="text-xs font-semibold text-muted-foreground tracking-wider uppercase px-2">
+          {section.title}
+          </h3>
+        )}
+        <div className="space-y-1">
+          {section.items.map((item) => {
+          const isActive = pathname === item.href
+          return (
+            <Link key={item.name} href={item.href}>
+            <div
+              className={cn(
+              "flex items-center px-3 py-2.5 rounded-lg transition-all duration-200 group",
+              collapsed ? "justify-center" : "space-x-3",
+              isActive
+                ? "bg-primary text-primary-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground hover:bg-accent",
+              )}
+            >
+              <item.icon className="h-5 w-5 flex-shrink-0" />
+              {!collapsed && <span className="font-medium">{item.name}</span>}
             </div>
-          </div>
-        ))}
+            </Link>
+          )
+          })}
+        </div>
+        </div>
+      ))}
       </nav>
 
       {/* Bottom Items */}
       <div className="p-4 border-t border-border space-y-1">
-        {bottomItems.map((item) => {
-          const isActive = pathname === item.href
-          return (
-            <Link key={item.name} href={item.href}>
-              <div
-                className={cn(
-                  "flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-all duration-200",
-                  isActive
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent",
-                )}
-              >
-                <item.icon className="h-5 w-5 flex-shrink-0" />
-                {!collapsed && <span className="font-medium">{item.name}</span>}
-              </div>
-            </Link>
-          )
-        })}
-        {!collapsed && (
-          <div className="pt-4">
-            <p className="text-xs text-muted-foreground px-2">ezenda.com</p>
+      {bottomItems.map((item) => {
+        const isActive = pathname === item.href
+        return (
+        <Link key={item.name} href={item.href}>
+          <div
+          className={cn(
+            "flex items-center px-3 py-2.5 rounded-lg transition-all duration-200",
+            collapsed ? "justify-center" : "space-x-3",
+            isActive
+            ? "bg-primary text-primary-foreground"
+            : "text-muted-foreground hover:text-foreground hover:bg-accent",
+          )}
+          >
+          <item.icon className="h-5 w-5 flex-shrink-0" />
+          {!collapsed && <span className="font-medium">{item.name}</span>}
           </div>
-        )}
+        </Link>
+        )
+      })}
+      {!collapsed && (
+        <div className="pt-4">
+        <p className="text-xs text-muted-foreground px-2">ezenda.com</p>
+        </div>
+      )}
       </div>
     </div>
   )
