@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { SetStateAction, useState } from "react"
 import { Layout } from "@/components/layout"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -41,18 +41,29 @@ export default function POS() {
     { id: 8, name: "Hair Oil", price: 75000, image: "/placeholder.svg?height=120&width=120" },
   ]
 
-  const addToCart = (product) => {
+  const addToCart = (product: { id?: number; name: string; price?: number; image?: string; quantity?: number }) => {
     const existingItem = cartItems.find((item) => item.name === product.name)
     if (existingItem) {
       setCartItems(
         cartItems.map((item) => (item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item)),
       )
     } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }])
+      // Ensure id and price are numbers and not undefined
+      if (typeof product.id === "number" && typeof product.price === "number") {
+        setCartItems([
+          ...cartItems,
+          {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity: 1,
+          },
+        ])
+      }
     }
   }
 
-  const updateQuantity = (id, change) => {
+  const updateQuantity = (id: number, change: number) => {
     setCartItems(
       cartItems
         .map((item) => {
@@ -66,7 +77,7 @@ export default function POS() {
     )
   }
 
-  const removeFromCart = (id) => {
+  const removeFromCart = (id: number) => {
     setCartItems(cartItems.filter((item) => item.id !== id))
   }
 
@@ -74,15 +85,16 @@ export default function POS() {
   const productsSubtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
   const grandTotal = serviceTotal + productsSubtotal
 
-  const formatCurrency = (amount) => {
+  const formatCurrency = (amount: string | number | bigint) => {
+    const numericAmount = typeof amount === "string" ? Number(amount) : amount
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
       currency: "IDR",
       minimumFractionDigits: 0,
-    }).format(amount)
+    }).format(numericAmount)
   }
 
-  const handlePaymentMethodSelect = (method) => {
+  const handlePaymentMethodSelect = (method: SetStateAction<string>) => {
     setSelectedPaymentMethod(method)
   }
 
