@@ -1,3 +1,0 @@
-untuk commit doang hehe
-.
-.
